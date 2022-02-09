@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: yellow;
+}
+.story_image {
+  position: relative;
+  transition: height .5s;
+  background: #eee;
+    }
+.story_image img{
+    width: 100%;
+    height: 87vh;
+}
+.mySlides {
+  position: absolute;
+  top: 0; left: 0;
+  transition: opacity .5s;
+    }
+
+.suchana{
+      font-size: 32px;
+      font-weight: bold;
+      color: navy;
+      padding-top: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="col-md-6">
+        <div class="story_image wow slideInLeft" data-wow-duration="2s">
+             <img src="images/display1.png" alt="" class="mySlides">
+             <img src="images/display2.PNG" alt="" class="mySlides">
+             <img src="images/display3.png" alt="" class="mySlides">
+             <img src="images/display4.jpg" alt="" class="mySlides">
+             <img src="images/display5.jpg" alt="" class="mySlides">
+             <img src="images/display10.jpg" alt="" class="mySlides">
+             <img src="images/display6.png" alt="" class="mySlides">
+             <img src="images/display7.jpg" alt="" class="mySlides">
+
+        </div>
+    </div>
+    <div class="suchana"><marquee direction=left behavior=scroll scrolldellay=10 scrollamount=10>1- रामलला की सांयकालीन आरती में सम्मलित होने के लिये सायं 6 बजे के पूर्व अपना पास बनवा लें  &nbsp&nbsp&nbsp&nbsp2-
+        आरती पास बनवाने के लिये आरती - पास काउन्टर पर अपनॉ आधार कार्ड / वोटर आई डी / ड्राईविंग लाईसेंस /  पासपोर्ट लेकर आयें &nbsp&nbsp&nbsp&nbsp3-  रामलला की आरती के लिये पास पूर्णतया निःशुल्क है	  &nbsp&nbsp&nbsp&nbsp धन्यवाद ईश्वर आपकी सभी मनोकामना पूर्ण करें</marquee></div>
+        </div>
+  
+
+<script>
+    var myIndex = 0,
+    container = document.getElementsByClassName('story_image')[0];
+
+carousel();
+
+function carousel() {
+  var i,
+      el,
+      x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.opacity = "0";
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1
+  }
+  el = x[myIndex - 1];
+  container.style.height = el.height + 'px';
+  setTimeout(function() {
+    el.style.opacity = "1";
+    setTimeout(carousel, 3000);
+  },500);
+}
+
+</script>
+
+</body>
+</html>
