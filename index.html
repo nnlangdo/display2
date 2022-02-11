@@ -34,9 +34,10 @@ body{
     </style>
 </head>
 <body>
-    <div class="col-md-6">
-        <div class="story_image wow slideInLeft" data-wow-duration="2s">
+    <div>
+        <div class="story_image" >
              <img src="images/display1.png" alt="" class="mySlides">
+             <img src="images/lakarsuchana1.png" alt="" class="mySlides">
              <img src="images/display2.PNG" alt="" class="mySlides">
              <img src="images/display3.png" alt="" class="mySlides">
              <img src="images/display4.jpg" alt="" class="mySlides">
@@ -44,11 +45,20 @@ body{
              <img src="images/display10.jpg" alt="" class="mySlides">
              <img src="images/display6.png" alt="" class="mySlides">
              <img src="images/display7.jpg" alt="" class="mySlides">
+             <img src="images/display11.jpg" alt="" class="mySlides">
+
 
         </div>
     </div>
-    <div class="suchana"><marquee direction=left behavior=scroll scrolldellay=10 scrollamount=10>1- रामलला की सांयकालीन आरती में सम्मलित होने के लिये सायं 6 बजे के पूर्व अपना पास बनवा लें  &nbsp&nbsp&nbsp&nbsp2-
-        आरती पास बनवाने के लिये आरती - पास काउन्टर पर अपनॉ आधार कार्ड / वोटर आई डी / ड्राईविंग लाईसेंस /  पासपोर्ट लेकर आयें &nbsp&nbsp&nbsp&nbsp3-  रामलला की आरती के लिये पास पूर्णतया निःशुल्क है	  &nbsp&nbsp&nbsp&nbsp धन्यवाद ईश्वर आपकी सभी मनोकामना पूर्ण करें</marquee></div>
+    <div class="suchana">
+      <marquee direction=left behavior=scroll scrolldellay=10 scrollamount=15>
+        1- रामलला की सांयकालीन आरती में सम्मलित होने के लिये सायं 6 बजे के पूर्व अपना पास बनवा लें  
+        &nbsp&nbsp&nbsp&nbsp2- आरती पास बनवाने के लिये आरती - पास काउन्टर पर अपनॉ आधार कार्ड / वोटर आई डी / ड्राईविंग लाईसेंस /  पासपोर्ट लेकर आयें 
+        &nbsp&nbsp&nbsp&nbsp3- रामलला की आरती के लिये पास पूर्णतया निःशुल्क है 
+        &nbsp&nbsp&nbsp&nbsp4- श्रीरामलला के दर्शनार्थियों से सनम्र निवेदन है कि पैसे, आभूषण, आईडी कार्ड के अतिरिक्त सभी सामान पास के लाकर जमा करा दें। 	
+        &nbsp&nbsp&nbsp&nbsp धन्यवाद ईश्वर आपकी सभी मनोकामना पूर्ण करें 
+      </marquee>
+      </div>
         </div>
   
 
@@ -66,15 +76,21 @@ function carousel() {
     x[i].style.opacity = "0";
   }
   myIndex++;
+
   if (myIndex > x.length) {
     myIndex = 1
   }
+  
   el = x[myIndex - 1];
   container.style.height = el.height + 'px';
   setTimeout(function() {
     el.style.opacity = "1";
-    setTimeout(carousel, 3000);
+    setTimeout(carousel, 12000);
   },100);
+
+
+
+  
 }
 
 </script>
