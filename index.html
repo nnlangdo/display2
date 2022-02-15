@@ -100,7 +100,7 @@ function carousel() {
     .then(function(resp) { return resp.json() }) // Convert data to json
     .then(function(data) {
       console.log(data['main']['temp']);
-      document.getElementById("demo").innerHTML = data['main']['temp'] - 273.15 + "*C";
+      document.getElementById("demo").innerHTML = (data['main']['temp'] - 273.15).toFixed() + "*C";
       
     })
     .catch(function() {
