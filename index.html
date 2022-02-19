@@ -98,9 +98,12 @@
               fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)  
               .then(function(resp) { return resp.json() }) // Convert data to json
               .then(function(data) {
-                console.log(data['main']['temp']);
-                document.getElementById("demo").innerHTML = (data['main']['temp'] - 273.15).toFixed() + "*C";
-                
+                // console.log(data);
+                // console.log(data['weather'][0]['icon'] + '.png');
+
+                // console.log(data['main']['temp']);
+                document.getElementById("demo").innerHTML = (data['main']['temp'] - 273.15).toFixed(2) + "*C";
+                // document.getElementById("demo2").innerHTML = (data['weather'][0]['icon'] + '.png');
               })
               .catch(function() {
                 // catch any errors
